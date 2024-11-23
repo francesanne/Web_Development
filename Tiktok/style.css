@@ -1,0 +1,385 @@
+
+.tiktok-header{
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 100;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.left-header{
+  width: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.middle-header{
+  display: flex;
+  max-width: 800px;
+  align-items: center;
+}
+
+.right-header{
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+
+
+.upload-button{
+  border: solid;
+  border-width: 0.1px;
+  border-radius: 2px;
+  border-color: rgb(216, 216, 216);
+  background-color: rgb(255, 255, 255);
+  width: 90px;
+  height: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: arial;
+  font-weight: bold;
+}
+
+.upload-button:hover{
+  background-color: rgb(216, 216, 216);
+  color: white;
+}
+
+.login-button{
+  border: none;
+  background-color: rgb(255, 27, 57);
+  width: 90px;
+  color: white;
+  height: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: arial;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover{
+  background-color: rgb(255, 91, 112);
+}
+
+
+.tiktok-logo{
+  width: 130px;
+  height: 35px;
+  padding-left: 25px;
+}
+
+.tiktok-search{
+  flex: 1;
+  background-color: rgb(247, 247, 247);
+  border: none;
+  width: 520px;
+  height: 38px;
+  border-radius: 18px;
+  font-family: Arial;
+  padding-left: 15px;
+  
+  transition: border 0.3s;
+  outline: none;
+}
+
+.tiktok-search::placeholder{
+  font-family: arial;
+  font-size: 15px;
+  color: rgb(87, 87, 87);
+
+}
+
+.tiktok-search:focus{
+  border: 0.01px solid rgb(68, 68, 68);
+}
+
+.search-logo{
+  width: 25px;
+  height: 25px;
+  background-color: rgb(247, 247, 247);
+  margin-left: -48px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  padding-right: 10px;
+  padding-left: 12px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  cursor: pointer;
+  color: rgb(160, 160, 160);
+}
+
+.profile-logo{
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  border-radius: 7px; 
+  padding: 7px;
+  background-color: transparent; 
+  transition: border-radius 0.3s, padding 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.profile-logo:hover {
+  border-radius: 20px; 
+  padding: 7px; 
+  background-color: #c9c9c9;
+}
+
+
+
+.vid-wrapper {
+  margin-left: 210px;
+  margin-top: 75px;
+  transition: margin-left 0.3s ease;
+}
+
+.vid-grid {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.vid-container {
+  display: inline-block;
+
+  padding-left: 10px;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.vid {
+  height: 390px;
+  width: 265px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.text1,
+.text2,
+.userprofile {
+  display: inline-block;
+  align-items: center;
+}
+
+.button-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+}
+
+.buttons {
+  padding-bottom: 14px;
+  padding-left: 7px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+
+.text,
+.text1,
+.userprofile {
+  margin: 0;
+}
+
+.vid-time {
+  font-family: arial;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 25px;
+  bottom: 69px;
+  float: left;
+  bottom: 0;
+  left: 4;
+}
+
+.userprofile {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.text {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 5px;
+  margin-left: 10px;
+  padding-left: 3px;
+}
+
+.text1,
+.text2 {
+  font-family: arial;
+  font-size: 12.5px;
+  margin: 0;
+}
+
+.text2 {
+  color: grey;
+  margin-left: 135px;
+}
+
+.text1{
+  padding-left: 5px;
+}
+
+.btn{
+  border: none;
+  background-color:  rgb(247, 247, 247);
+  color: black;
+  font-family: arial;
+  border-radius: 5px;
+  padding: 7px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover{
+  background-color: lightgray;
+  color: black;
+}
+
+
+.btn1{
+  border: none;
+  background-color: rgb(37, 37, 37);
+  color:white;
+  font-family: arial;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.btn2{
+  border: none;
+  background-color: rgb(247, 247, 247);
+  color: black;
+  font-family: arial;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-right: 20px ;
+  z-index: 50px;
+  box-shadow: 0px 0px 10px 5px rgba(226, 226, 226, 0.75);
+}
+
+
+
+.hashtag{
+  color: rgb(82, 82, 255);
+}
+
+body {
+  overflow-x: hidden; 
+}
+
+
+#main-content{
+  width: 100%;
+}
+
+#left {
+  width: 20%;
+  background-color: #ffffff;
+  padding: 20px;
+  position: fixed;
+  top: 55px; 
+  bottom: 0;
+  left: 0;
+}
+
+#right {
+  width: 80%;
+  margin-left: 3%;
+  margin-top: 0px; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.left-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-button {
+  border: none;
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-button:hover {
+  background-color: #ddd;
+}
+
+.left-button i {
+  margin-right: 5px; 
+}
+
+.left-button.pink {
+  color: rgb(255, 91, 112);
+}
+
+@media(max-width: 600px) {
+  .tiktok-search {
+    display: none; 
+  }
+  .search-logo {
+    display: none; 
+  }
+  #left{
+    display: none;
+  }
+  #right {
+    width: 100%;
+    margin-left: 0;
+    position: static;
+  }
+
+  .vid-wrapper {
+    margin-left: 0;
+  }
+
+  .vid-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2px; 
+  }
+
+  .vid-container {
+    width: 100%; 
+  }
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main/dashboard.css">
+</head>
+
+<body>
+  <header>
+    <div class="greeting">
+      <p id="greeting"></p>
+    </div>
+
+    <div class="header-icons">
+      <div class="profile-icon">
+        <i id="profileIcon" alt="Profile" class="material-icons">person</i>
+        <div class="dropdown-content">
+          <a href="main/profile.html">Profile</a>
+          <a href="main/login.html">Logout</a>
+        </div>
+      </div>
+
+      <div class="theme-icon" id="themeIcon">
+        <i id="themeToggle" class="material-icons">brightness_4</i>
+        <div class="dropdown-content">
+          <a href="#" id="lightMode">Light Mode</a>
+          <a href="#" id="darkMode">Dark Mode</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <iframe src="main/aside.html" frameborder="0" scrolling="no"></iframe>
+
+  <div class="content">
+
+  </div>
+
+  <script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="main/dashboard.css">
+</head>
+
+<body>
+    <header>
+        <div class="greeting">
+            <p id="greeting"></p>
+        </div>
+
+        <div class="header-icons">
+            <div class="profile-icon">
+                <i id="profileIcon" alt="Profile" class="material-icons">person</i>
+                <div class="dropdown-content">
+                    <a href="main/profile.html">Profile</a>
+                    <a href="main/login.html">Logout</a>
+                </div>
+            </div>
+
+            <div class="theme-icon" id="themeIcon">
+                <i id="themeToggle" class="material-icons">brightness_4</i>
+                <div class="dropdown-content">
+                    <a href="#" id="lightMode">Light Mode</a>
+                    <a href="#" id="darkMode">Dark Mode</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <iframe src="main/aside.html" frameborder="0" scrolling="no"></iframe>
+
+    <div class="content">
+
+        <h1>Live example</h1>
+        <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="" class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h1>Translucent</h1>
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-body-secondary">11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+        <br><br>
+        <h1>Stacking</h1>
+        <div class="toast-container position-static">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small class="text-body-secondary">just now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    See? Just like this.
+                </div>
+            </div>
+
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small class="text-body-secondary">2 seconds ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Heads up, toasts will stack automatically
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h1>Custom content</h1>
+        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <br>
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+                <div class="mt-2 pt-2 border-top">
+                    <button type="button" class="btn btn-primary btn-sm">Take action</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h1>Color schemes</h1>
+        <div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+        <br><br>
+        <h1>Placement</h1>
+        <form>
+            <div class="mb-3">
+                <label for="selectToastPlacement">Toast placement</label>
+                <select class="form-select mt-2" id="selectToastPlacement">
+                    <option value="" selected>Select a position...</option>
+                    <option value="top-0 start-0">Top left</option>
+                    <option value="top-0 start-50 translate-middle-x">Top center</option>
+                    <option value="top-0 end-0">Top right</option>
+                    <option value="top-50 start-0 translate-middle-y">Middle left</option>
+                    <option value="top-50 start-50 translate-middle">Middle center</option>
+                    <option value="top-50 end-0 translate-middle-y">Middle right</option>
+                    <option value="bottom-0 start-0">Bottom left</option>
+                    <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
+                    <option value="bottom-0 end-0">Bottom right</option>
+                </select>
+            </div>
+        </form>
+        <div aria-live="polite" aria-atomic="true"
+            class="bg-body-secondary position-relative bd-example-toasts rounded-3">
+            <div class="toast-container p-3" id="toastPlacement">
+                <div class="toast">
+                    <div class="toast-header">
+                        <img src="..." class="rounded me-2" alt="...">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small>11 mins ago</small>
+                    </div>
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div aria-live="polite" aria-atomic="true" class="position-relative">
+            <!-- Position it: -->
+            <!-- - `.toast-container` for spacing between toasts -->
+            <!-- - `top-0` & `end-0` to position the toasts in the upper right corner -->
+            <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
+            <div class="toast-container top-0 end-0 p-3">
+
+                <!-- Then put toasts within -->
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="..." class="rounded me-2" alt="...">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small class="text-body-secondary">just now</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        See? Just like this.
+                    </div>
+                </div>
+
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="..." class="rounded me-2" alt="...">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small class="text-body-secondary">2 seconds ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Heads up, toasts will stack automatically
+                    </div>
+                </div>
+            </div>
+        </div> <br><br>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn');
+        const toastLiveExample = document.getElementById('liveToast');
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show();
+            });
+        }
+    </script>
+
+    <script src="dashboard.js"></script>
+
+
+
+</body>
+
+</html>

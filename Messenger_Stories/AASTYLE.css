@@ -1,0 +1,186 @@
+.rowformat {
+    margin-top: 50px;;
+    display: grid;
+    grid-template-columns: repeat(8, 150px);
+    column-gap: 10px;
+    overflow-x: auto;
+    margin-left: 300px;
+    position: relative;
+    margin-right: 200px;
+    padding-left: 5px;
+
+}
+
+.rowformat::-webkit-scrollbar{
+    background: rgb(255, 255, 255);
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin-left: 100px;
+    
+}
+
+.messenger-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d2cece;
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.MyProfilePic {
+    width: 180px;
+    height: 200px;
+    border-bottom: 1px solid #9f9f9f;
+    position: relative;
+    z-index: 1;
+    opacity: 1; /* Set initial opacity to fully visible */
+    transition: opacity 0.3s; /* Add a smooth transition effect */
+}
+
+.plus-button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(44, 44, 250);
+    z-index: 3;
+    border: 4px solid white;
+    border-radius: 24.5px;
+    font-size: 30px;
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.AddStory {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 25px;
+}
+
+.friend-story-container {
+    position: relative;
+    width: 150px;
+    height: 250px;
+    border: 1px solid #9f9f9f;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.friend-profile {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3.5px solid blue;
+}
+
+.friend-profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.friend-story-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; /* Set initial opacity for the friend story pic */
+    cursor: pointer;
+    transition: opacity 0.3s; /* Add a smooth transition effect */
+}
+
+.friend-name {
+    position: absolute;
+    bottom: 10px;
+    left: 13px;
+    right: 0;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 0 1px #a8a8a8, 0 0 1px #e6e6e6;
+    color: #ffffff;
+}
+
+.friend-story-pic:hover,
+.MyProfilePic:hover {
+    opacity: 0.9; /* Set opacity on hover */
+}
+
+.arrow-button {
+    margin-top: 65px;
+    margin-left: -35px;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    left: 1000px;
+    border: none;
+    border-radius: 50%;
+    font-size: 40px;
+    text-align: center;
+    font-family: arial;
+    color: #333;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.arrow-button:hover {
+    background-color: rgb(204, 203, 203);
+}
+
+.cover-white {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px; /* Adjust the width as needed */
+    background-color: white;
+    z-index: 4;
+}
+
+.left-sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 40px;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    z-index: 2;
+  }
+  
+  .right-sidebar{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    z-index: 2;
+  }

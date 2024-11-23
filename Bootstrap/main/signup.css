@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:  linear-gradient(45deg,  #000000, #434343);;
+  overflow: hidden;
+}
+
+
+.signup-container{
+    display: grid;
+    width: 400px;
+    height: 550px;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 2px rgb(0, 0, 0);
+    
+}
+
+#signup-header{
+  font-size: 50px;
+  color: linear-gradient(45deg, #00193a, #0f3057);
+  padding-top: 10px;
+}
+
+#signupForm {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 0px;
+}
+
+#firstName,
+#lastName,
+#email,
+#password,
+#confirmPassword {
+  width: 206px;
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  outline: none;
+  padding: 6px;
+  margin-bottom: 0;
+}
+
+
+#create {
+  width: 220px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #000000;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+.login-link{
+  padding-bottom: 20px;
+}
+.login-link a {
+  color:#3a3a3a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link p{
+  font-size: 12px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

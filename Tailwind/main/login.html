@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-br from-black to-gray-700 min-h-screen flex justify-center items-center">
+
+    <div class="login-container flex justify-center items-center h-96 sm:w-80 h-96 p-6 pt-12 max-w-xl max-h-screen relative mx-auto h-350 lg:w-300 xl:w-300 2xl:w-300 sm:w-full">
+        <div class="bg-white rounded-lg shadow-md p-8 w-96">
+            <h1 id="login-header" class="text-4xl font-bold mb-8 text-gradient text-center">Login</h1>
+            <form id="loginForm" class="grid grid-cols-1 gap-1 items-center">
+                <input type="email" id="email" placeholder="Email" required
+                    class="w-full border-b-2 border-gray-700 rounded-lg outline-none py-2 px-4 mb-4">
+                <input type="password" id="password" placeholder="Password" required
+                    class="w-full border-b-2 border-gray-700 rounded-lg outline-none py-2 px-4 mb-4">
+
+                <div class="remember-forgot text-sm flex justify-between items-center mb-6">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="rememberMe" class="mr-2">
+                        <label for="rememberMe">Remember Me</label>
+                    </div>
+                    <a href="#" id="forgotPassword" class="text-gray-700 font-bold">Forgot Password?</a>
+                </div>
+
+                <button id="loginButton" type="submit"
+                    class="w-full py-2 px-4 bg-black text-white font-bold rounded cursor-pointer">Login</button>
+
+                <div class="register-link mt-4 text-center">
+                    <p>Don't have an account? <a href="signup.html" class="font-bold text-gray-700">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="login.js"></script>
+</body>
+
+</html>

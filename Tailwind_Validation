@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-300 flex justify-center items-center h-screen">
+  <div class="bg-gray-100 rounded-xl shadow-lg mx-auto w-full sm:w-80 h-96 p-6 pt-12 max-w-xl max-h-screen relative
+              mx-auto h-350 lg:w-300 xl:w-300 2xl:w-300 sm:w-full">
+    <h2 class="text-3xl font-bold mb-8 text-center">Login</h2>
+
+    <input 
+      id="username-field"
+      placeholder="Username"
+      class="w-full rounded-xl border border-gray-200 py-2 px-4 mb-4 mt-4 focus:outline-none"
+    >
+
+    <input 
+      id="password-field"
+      placeholder="Password"
+      type="password"
+      class="w-full rounded-xl border border-gray-200 py-2 px-4 mb-8 focus:outline-none"
+    >
+
+    <button id="login-button" class="w-full rounded-xl bg-blue-700 text-white py-2 px-4 hover:bg-blue-400">
+      Log In
+    </button>
+  </div>
+
+  <div id="modal-overlay" class="fixed inset-0 flex justify-center items-center z-50 hidden">
+    <div class="bg-gray-400 text-black px-4 py-2 rounded-xl">
+      <p id="message"></p>
+      <button id="ok-button" class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg ">Ok</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('login-button').addEventListener('click', function() {
+      var username = document.getElementById('username-field').value.trim();
+      var password = document.getElementById('password-field').value.trim();
+      var messageElement = document.getElementById('message');
+      var modalOverlay = document.getElementById('modal-overlay');
+
+      if (username.startsWith('@')) {
+          console.log("Username:", username); 
+          console.log("Password:", password);
+          document.getElementById('username-field').value = ''; 
+          document.getElementById('password-field').value = '';
+          
+          var message = "Congratulations. You have successfully logged in!"; 
+          messageElement.innerText = message;
+          
+      } else {
+          var message = "Username must start with '@'. Please try again.";
+          messageElement.innerText = message;
+          
+      }
+      modalOverlay.classList.remove('hidden');
+    });
+
+    document.getElementById('ok-button').addEventListener('click', function() {
+      var modalOverlay = document.getElementById('modal-overlay');
+      modalOverlay.classList.add('hidden'); 
+    });
+  </script>
+</body>
+
+</html>

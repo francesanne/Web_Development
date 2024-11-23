@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main/dashboard.css">
+</head>
+
+<body>
+  <header>
+    <div class="greeting">
+      <p id="greeting"></p>
+    </div>
+
+    <div class="header-icons">
+      <div class="profile-icon">
+        <i id="profileIcon" alt="Profile" class="material-icons">person</i>
+        <div class="dropdown-content">
+          <a href="main/profile.html">Profile</a>
+          <a href="main/login.html">Logout</a>
+        </div>
+      </div>
+
+      <div class="theme-icon" id="themeIcon">
+        <i id="themeToggle" class="material-icons">brightness_4</i>
+        <div class="dropdown-content">
+          <a href="#" id="lightMode">Light Mode</a>
+          <a href="#" id="darkMode">Dark Mode</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <iframe src="main/aside.html" frameborder="0" scrolling="no"></iframe>
+
+  <div class="content">
+    <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <dt class="text-base leading-7 text-gray-600">Transactions every 24 hours</dt>
+              <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">44 million</dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <dt class="text-base leading-7 text-gray-600">Assets under holding</dt>
+              <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">$119 trillion</dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <dt class="text-base leading-7 text-gray-600">New users annually</dt>
+              <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">46,000</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      
+  </div>
+
+  <script src="dashboard.js"></script>
+
+</body>
+
+</html>
